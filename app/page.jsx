@@ -1,20 +1,15 @@
+"use client";
 import { LuClipboardCheck } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
-import { DiResponsive } from "react-icons/di";
-import { GiJusticeStar } from "react-icons/gi";
-import { FaRegThumbsUp } from "react-icons/fa";
-import { BsGraphUpArrow } from "react-icons/bs";
-import { FaFirefoxBrowser } from "react-icons/fa";
-import {
-  Button1,
-  Loader2,
-  Loader3,
-  Toggle2,
-  Button3,
-  Loader9,
-} from "segmentor";
+import { Button1, Loader2, Toggle2, Button3, Loader9 } from "segmentor";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("https://github.com/aditya7483thakur/segmentor");
+  };
   return (
     <>
       <div className="flex justify-center mt-10">
@@ -29,7 +24,10 @@ export default function Home() {
           <span className="my-auto">npm i segmentor</span>
           <LuClipboardCheck className=" text-2xl my-auto mr-3" />
         </div>
-        <button className="bg-red-600 md:bg-transparent md:border-cyan-700 md:border-2 transition-all ease-in-out duration-300 transform hover:scale-105  md:hover:bg-cyan-700 w-3/4 md:max-w-80 rounded-lg md:mx-10 my-4 h-16 text-xl font-medium">
+        <button
+          onClick={handleClick}
+          className="bg-red-600 md:bg-transparent md:border-cyan-700 md:border-2 transition-all ease-in-out duration-300 transform hover:scale-105  md:hover:bg-cyan-700 w-3/4 md:max-w-80 rounded-lg md:mx-10 my-4 h-16 text-xl font-medium"
+        >
           <div className="flex flex-row items-center justify-center">
             <FaGithub className=" mx-1 text-2xl" />
             <span className="mx-1"> View github</span>

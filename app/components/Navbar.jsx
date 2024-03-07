@@ -5,6 +5,7 @@ import { CgDarkMode } from "react-icons/cg";
 import { IoMdSearch } from "react-icons/io";
 import { FaBars } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,18 +29,18 @@ const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-4 md:ml-8 flex items-baseline space-x-4">
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-lg font-medium"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/about"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-lg font-medium"
                 >
                   About
-                </a>
+                </Link>
                 <div className="relative inline-block">
                   <button
                     onClick={toggleDropdown}
@@ -49,27 +50,52 @@ const Navbar = () => {
                     Components <FiChevronDown className="ml-1 h-5 w-5" />
                   </button>
                   {showDropdown && (
-                    <div className="origin-top-left absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                    <div className="origin-top-left absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-black border-blue-700 border-2 text-grey-300 ring-1 ring-black ring-opacity-5">
                       <div
-                        className="py-1"
+                        className="py-1 "
                         role="menu"
                         aria-orientation="vertical"
                         aria-labelledby="options-menu"
                       >
-                        <a
-                          href="#"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        <Link
+                          href="/buttons"
+                          className="block px-4 py-3 text-sm hover:bg-gray-100 hover:text-gray-900"
                           role="menuitem"
                         >
-                          Option 1
-                        </a>
-                        <a
-                          href="#"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                          Buttons
+                        </Link>
+                        <hr />
+                        <Link
+                          href="/cards"
+                          className="block px-4 py-3 text-sm hover:bg-gray-100 hover:text-gray-900"
                           role="menuitem"
                         >
-                          Option 2
-                        </a>
+                          Cards
+                        </Link>
+                        <hr />
+                        <Link
+                          href="inputs"
+                          className="block px-4 py-3 text-sm hover:bg-gray-100 hover:text-gray-900"
+                          role="menuitem"
+                        >
+                          Inputs
+                        </Link>
+                        <hr />
+                        <Link
+                          href="/loaders"
+                          className="block px-4 py-3 text-sm hover:bg-gray-100 hover:text-gray-900"
+                          role="menuitem"
+                        >
+                          Loaders
+                        </Link>
+                        <hr />
+                        <Link
+                          href="/toggleButtons"
+                          className="block px-4 py-3 text-sm hover:bg-gray-100 hover:text-gray-900"
+                          role="menuitem"
+                        >
+                          Toggle Buttons
+                        </Link>
                       </div>
                     </div>
                   )}
@@ -103,7 +129,8 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-4 md:ml-8 flex items-baseline space-x-4">
               <a
-                href="#"
+                href="https://github.com/aditya7483thakur/segmentor"
+                target="_blank"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-lg font-medium"
               >
                 <FaGithub className="h-8 w-8 text-white" />
@@ -120,18 +147,18 @@ const Navbar = () => {
       </div>
       <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
             Home
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/about"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           >
             About
-          </a>
+          </Link>
           <div className="relative inline-block">
             <button
               onClick={toggleDropdown}
@@ -144,27 +171,52 @@ const Navbar = () => {
               </div>
             </button>
             {showDropdown && (
-              <div className="origin-top-left absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+              <div className="origin-top-left absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-black border-blue-700 border-2 text-grey-300 ring-1 ring-black ring-opacity-5">
                 <div
-                  className="py-1"
+                  className="py-1 "
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"
                 >
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                  <Link
+                    href="/buttons"
+                    className="block px-4 py-3 text-sm hover:bg-gray-100 hover:text-gray-900"
                     role="menuitem"
                   >
-                    Option 1
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                    Buttons
+                  </Link>
+                  <hr />
+                  <Link
+                    href="/cards"
+                    className="block px-4 py-3 text-sm hover:bg-gray-100 hover:text-gray-900"
                     role="menuitem"
                   >
-                    Option 2
-                  </a>
+                    Cards
+                  </Link>
+                  <hr />
+                  <Link
+                    href="inputs"
+                    className="block px-4 py-3 text-sm hover:bg-gray-100 hover:text-gray-900"
+                    role="menuitem"
+                  >
+                    Inputs
+                  </Link>
+                  <hr />
+                  <Link
+                    href="/loaders"
+                    className="block px-4 py-3 text-sm hover:bg-gray-100 hover:text-gray-900"
+                    role="menuitem"
+                  >
+                    Loaders
+                  </Link>
+                  <hr />
+                  <Link
+                    href="/toggleButtons"
+                    className="block px-4 py-3 text-sm hover:bg-gray-100 hover:text-gray-900"
+                    role="menuitem"
+                  >
+                    Toggle Buttons
+                  </Link>
                 </div>
               </div>
             )}
@@ -173,7 +225,8 @@ const Navbar = () => {
         <div className="md:block">
           <div className="ml-4 md:ml-8 flex items-baseline space-x-4">
             <a
-              href="#"
+              href="https://github.com/aditya7483thakur/segmentor"
+              target="_blank"
               className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-base font-medium"
             >
               <FaGithub className="h-8 w-8 text-white" />
