@@ -7,27 +7,32 @@ const inputs = [
   {
     component: Input1,
     code: `import {Input1} from segmentor;
-<Input1 onChange={<your function>} placeholder={<placeholder>}/>`,
+<Input1 onChange={<your function>} placeholder={<placeholder>}
+textColour={"<colour>"} backgroundColour={"<colour>"} />`,
   },
   {
     component: Input2,
     code: `import {Input2} from segmentor;
-<Input2 onChange={<your function>} placeholder={<placeholder>}/>`,
+<Input2 onChange={<your function>} placeholder={<placeholder>}/>
+textColour={"<colour>"} backgroundColour={"<colour>"} />`,
   },
   {
     component: Input3,
     code: `import {Input3} from segmentor;
-<Input3 onChange={<your function>} placeholder={<placeholder>}/>`,
+<Input3 onChange={<your function>} placeholder={<placeholder>}/>
+textColour={"<colour>"} backgroundColour={"<colour>"} />`,
   },
   {
     component: Input4,
     code: `import {Input4} from segmentor;
-<Input4 onChange={<your function>} placeholder={<placeholder>}/>`,
+<Input4 onChange={<your function>} placeholder={<placeholder>}/>
+textColour={"<colour>"} backgroundColour={"<colour>"} />`,
   },
   {
     component: Input5,
     code: `import {Input5} from segmentor;
-<Input5 onChange={<your function>} placeholder={<placeholder>}/>`,
+<Input5 onChange={<your function>} placeholder={<placeholder>}/>
+textColour={"<colour>"} backgroundColour={"<colour>"} />`,
   },
 ];
 
@@ -39,7 +44,11 @@ const page = () => {
         {inputs.map((input, index) => (
           <div className="md:flex mb-14 " key={index}>
             <div className=" w-full md:w-1/2 flex justify-center items-center">
-              <input.component className={" w-96"} />
+              <input.component
+                className={" w-96"}
+                textColour={"white"}
+                backgroundColour={"transparent"}
+              />
             </div>
             <div>
               <Code code={input.code} language="javascript" />

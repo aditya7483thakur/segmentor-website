@@ -3,13 +3,29 @@ import { LuClipboardCheck } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
 import { Button1, Loader2, Toggle2, Button3, Loader9 } from "segmentor";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 export default function Home() {
   const router = useRouter();
 
+  const handleCopyToClipboard = () => {
+    const textToCopy = "npm i segmentor";
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        // Clipboard successfully copied
+        toast.success("Copied to Clipboard !");
+      })
+      .catch((error) => {
+        // Handle errors if any
+        toast.error("Error copying to clipboard:", error);
+      });
+  };
+
   const handleClick = () => {
     router.push("https://github.com/aditya7483thakur/segmentor");
   };
+
   return (
     <>
       <div className="flex justify-center mt-10">
@@ -19,7 +35,10 @@ export default function Home() {
         Elevate your design with our dynamic and animated UI components
       </h1>
       <div className="flex flex-col md:flex-row mt-10 justify-center items-center">
-        <div className="bg-indigo-700 md:bg-transparent md:border-cyan-700 md:border-2 transition-all ease-in-out duration-300 transform hover:scale-105  md:hover:bg-cyan-700 cursor-pointer w-3/4 md:max-w-80 rounded-lg md:mx-10 my-4 h-16 flex flex-row justify-between text-xl font-medium">
+        <div
+          className="bg-indigo-700 md:bg-transparent md:border-cyan-700 md:border-2 transition-all ease-in-out duration-300 transform hover:scale-105  md:hover:bg-cyan-700 cursor-pointer w-3/4 md:max-w-80 rounded-lg md:mx-10 my-4 h-16 flex flex-row justify-between text-xl font-medium"
+          onClick={handleCopyToClipboard}
+        >
           <span className="my-auto ml-4">$</span>
           <span className="my-auto">npm i segmentor</span>
           <LuClipboardCheck className=" text-2xl my-auto mr-3" />
