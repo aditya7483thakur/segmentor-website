@@ -135,12 +135,6 @@ const Navbar = () => {
               >
                 <FaGithub className="h-8 w-8 text-white" />
               </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-[6px] rounded-md text-lg font-medium"
-              >
-                <CgDarkMode className="h-9 w-9 text-white" />
-              </a>
             </div>
           </div>
         </div>
@@ -230,12 +224,6 @@ const Navbar = () => {
               className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-2 rounded-md text-base font-medium"
             >
               <FaGithub className="h-8 w-8 text-white" />
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white px-1 py-[5px] rounded-md text-base font-medium"
-            >
-              <CgDarkMode className="h-9 w-9 text-white" />
             </a>
           </div>
         </div>
