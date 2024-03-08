@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <>
       <div className="flex justify-center mt-10">
-        <img src="logo.png" className="w-56" />
+        <img src="logo.png" className="w-56" alt="Logo.." />
       </div>
       <h1 className=" mt-8 text-4xl md:text-6xl px-6 font-medium md:px-20 text-center">
         Elevate your design with our dynamic and animated UI components

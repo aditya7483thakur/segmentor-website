@@ -19,8 +19,8 @@ const page = () => {
           requirements.
         </div>
         <div className=" mt-7 md:block hidden">
-          Have questions, feedback, or suggestions? We'd love to hear from you!
-          Get in touch with us via email at{" "}
+          Have questions, feedback, or suggestions? We&apos;d love to hear from
+          you! Get in touch with us via email at{" "}
           <span className="underline">adityakumarji7483@email</span>.com or
           through our GitHub repository :{" "}
           <Link
@@ -29,10 +29,11 @@ const page = () => {
           >
             github.com/aditya7483thakur/segmentor
           </Link>
-          . Thank you for choosing Segmentor! We're excited to be a part of your
-          development journey.
+          . Thank you for choosing Segmentor! We&apos;re excited to be a part of
+          your development journey.
         </div>
       </div>
+
       <div className="w-1/2 md:block hidden">
         <img className="w-full" src="image.png" alt="Image..." />
       </div>
