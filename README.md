@@ -2,10 +2,8 @@
 
 Segmentor is an npm package that provides animated and modern UI components built with Next.js and Tailwind CSS. The package is designed to offer a minimal size footprint while ensuring optimized code for seamless integration into your projects.
 
-
 ## Preview
-
-https://drive.google.com/file/d/1Bh5oMV2Akb4HwHMEndLwu9agQ8yXZ1y3/view?usp=sharing
+https://github.com/aditya7483thakur/segmentor-website/assets/119169142/454b1dcb-9fdc-4beb-91dd-26cd7f42ebfb
 
 ## Features
 
