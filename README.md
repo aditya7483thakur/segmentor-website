@@ -5,7 +5,7 @@ Segmentor is an npm package that provides animated and modern UI components buil
 
 ## Preview
 
-https://github.com/Yash-sudo-web/synkro/assets/69838816/3cb974fd-52d0-42b9-b2fd-f9b3e7f00a5e
+https://drive.google.com/file/d/1Bh5oMV2Akb4HwHMEndLwu9agQ8yXZ1y3/view?usp=sharing
 
 ## Features
 
